@@ -37,14 +37,8 @@
                             700: '#8C6E50',
                             800: '#6E553D',
                         },
-                        /* Warm Light & Ultra-Dark Palette */
+                        /* Ultra-Dark Palette for Dark Mode */
                         beige: {
-                            50: '#FAF6F0',
-                            /* Light background */
-                            100: '#F2E8DC',
-                            /* Light cards & containers */
-                            200: '#E4D3C0',
-                            /* Light borders */
                             300: '#AD8D6D',
                             /* Primary logo beige */
                             800: '#1E1E1C',
@@ -92,7 +86,7 @@
         }
 
         .glass-panel {
-            background: rgba(250, 246, 240, 0.92);
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
@@ -136,11 +130,11 @@
 </head>
 
 <body
-    class="overflow-x-hidden font-sans leading-relaxed bg-beige-50 text-stone-900 dark:bg-beige-950 dark:text-stone-100 transition-colors duration-300 min-h-screen selection:bg-amber-800 selection:text-white">
+    class="overflow-x-hidden font-sans leading-relaxed bg-white text-zinc-900 dark:bg-beige-950 dark:text-stone-100 transition-colors duration-300 min-h-screen selection:bg-amber-800 selection:text-white">
 
     <!-- Mobile Menu Backdrop Overlay -->
     <div id="menuOverlay"
-        class="fixed inset-0 bg-stone-900/60 z-40 hidden md:hidden transition-opacity duration-300 modal-blur"
+        class="fixed inset-0 bg-zinc-900/60 z-40 hidden md:hidden transition-opacity duration-300 modal-blur"
         onclick="closeMenu()">
     </div>
 
@@ -148,7 +142,7 @@
     <header class="w-full fixed top-0 left-0 z-50 transition-all duration-300">
 
         <nav
-            class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-3 sm:py-4 flex items-center justify-between glass-panel border-b border-beige-200/80 dark:border-beige-800/80">
+            class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-3 sm:py-4 flex items-center justify-between glass-panel border-b border-zinc-200/80 dark:border-beige-800/80">
 
             <!-- Brand Logo -->
             <a href="#top"
@@ -160,7 +154,7 @@
                     class="w-24 sm:w-28 md:w-32 object-contain group-hover:scale-105 transition-transform hidden dark:block">
 
                 <span
-                    class="mt-1 text-[9px] sm:text-[10px] font-mono text-stone-500 dark:text-stone-400 whitespace-nowrap">
+                    class="mt-1 text-[9px] sm:text-[10px] font-mono text-zinc-500 dark:text-stone-400 whitespace-nowrap">
                     Software Engineer
                 </span>
 
@@ -168,7 +162,7 @@
 
             <!-- Desktop Navigation Links -->
             <ul
-                class="hidden md:flex items-center gap-1 lg:gap-2 rounded-full px-4 py-1.5 bg-beige-100/80 dark:bg-beige-900/80 border border-beige-200 dark:border-beige-800 font-serif text-sm font-medium shadow-inner">
+                class="hidden md:flex items-center gap-1 lg:gap-2 rounded-full px-4 py-1.5 bg-zinc-100/80 dark:bg-beige-900/80 border border-zinc-200 dark:border-beige-800 font-serif text-sm font-medium shadow-inner">
 
                 <li>
                     <a href="#top"
@@ -211,7 +205,7 @@
 
                 <!-- Command Palette -->
                 <button onclick="toggleCommandPalette()"
-                    class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-beige-100 dark:bg-beige-900 border border-beige-200 dark:border-beige-800 text-xs text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white transition-all cursor-pointer"
+                    class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-zinc-100 dark:bg-beige-900 border border-zinc-200 dark:border-beige-800 text-xs text-zinc-500 dark:text-stone-400 hover:text-zinc-900 dark:hover:text-white transition-all cursor-pointer"
                     title="Search & Shortcuts (Cmd + K)">
 
                     <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -226,7 +220,7 @@
 
                 <!-- Dark/Light Theme Toggle -->
                 <button id="theme-toggle" aria-label="Toggle dark mode"
-                    class="p-2 rounded-lg bg-beige-100 dark:bg-beige-900 border border-beige-200 dark:border-beige-800 hover:bg-beige-200 dark:hover:bg-beige-800 transition-all cursor-pointer text-stone-700 dark:text-stone-300">
+                    class="p-2 rounded-lg bg-zinc-100 dark:bg-beige-900 border border-zinc-200 dark:border-beige-800 hover:bg-zinc-200 dark:hover:bg-beige-800 transition-all cursor-pointer text-zinc-700 dark:text-stone-300">
 
                     <svg class="w-4 h-4 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -241,7 +235,7 @@
 
                 <!-- Primary CTA -->
                 <a href="#contact"
-                    class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 text-xs sm:text-sm font-medium hover:bg-amber-800 dark:hover:bg-amber-600 dark:hover:text-white transition-all duration-300 shadow-sm">
+                    class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 text-white dark:bg-stone-100 dark:text-stone-900 text-xs sm:text-sm font-medium hover:bg-amber-800 dark:hover:bg-amber-600 dark:hover:text-white transition-all duration-300 shadow-sm">
 
                     <span>Contact</span>
 
@@ -253,7 +247,7 @@
 
                 <!-- Mobile Navigation Toggle -->
                 <button
-                    class="block md:hidden p-2 rounded-lg bg-beige-100 dark:bg-beige-900 border border-beige-200 dark:border-beige-800 cursor-pointer text-stone-800 dark:text-stone-200"
+                    class="block md:hidden p-2 rounded-lg bg-zinc-100 dark:bg-beige-900 border border-zinc-200 dark:border-beige-800 cursor-pointer text-zinc-800 dark:text-stone-200"
                     onclick="openMenu()" aria-label="Open Menu">
 
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -265,11 +259,11 @@
 
             <!-- Mobile Side Menu -->
             <div id="sideMenu"
-                class="flex md:hidden flex-col justify-between py-8 px-6 sm:px-8 fixed right-0 top-0 bottom-0 w-[min(20rem,85vw)] z-50 h-screen bg-beige-50 dark:bg-beige-900 transition-transform duration-500 transform translate-x-full border-l border-beige-200 dark:border-beige-800 shadow-2xl">
+                class="flex md:hidden flex-col justify-between py-8 px-6 sm:px-8 fixed right-0 top-0 bottom-0 w-[min(20rem,85vw)] z-50 h-screen bg-white dark:bg-beige-900 transition-transform duration-500 transform translate-x-full border-l border-zinc-200 dark:border-beige-800 shadow-2xl">
 
                 <div>
 
-                    <div class="flex items-center justify-between pb-8 border-b border-beige-200 dark:border-beige-800">
+                    <div class="flex items-center justify-between pb-8 border-b border-zinc-200 dark:border-beige-800">
 
                         <div class="flex flex-col items-center">
 
@@ -278,13 +272,13 @@
                             <img src="./images/logo-dark.png" alt="Abdul logo"
                                 class="w-24 sm:w-28 md:w-32 object-contain hidden dark:block">
 
-                            <span class="mt-1 text-[9px] font-mono text-stone-500 dark:text-stone-400">
+                            <span class="mt-1 text-[9px] font-mono text-zinc-500 dark:text-stone-400">
                                 Software Engineer
                             </span>
                         </div>
 
                         <button onclick="closeMenu()"
-                            class="p-2 rounded-lg hover:bg-beige-200 dark:hover:bg-beige-800 text-stone-500">
+                            class="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-beige-800 text-zinc-500">
 
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -297,35 +291,35 @@
 
                         <li>
                             <a href="#top" onclick="closeMenu()"
-                                class="block text-stone-800 dark:text-stone-200 hover:text-amber-700">
+                                class="block text-zinc-800 dark:text-stone-200 hover:text-amber-700">
                                 Home
                             </a>
                         </li>
 
                         <li>
                             <a href="#about" onclick="closeMenu()"
-                                class="block text-stone-800 dark:text-stone-200 hover:text-amber-700">
+                                class="block text-zinc-800 dark:text-stone-200 hover:text-amber-700">
                                 About Me
                             </a>
                         </li>
 
                         <li>
                             <a href="#services" onclick="closeMenu()"
-                                class="block text-stone-800 dark:text-stone-200 hover:text-amber-700">
+                                class="block text-zinc-800 dark:text-stone-200 hover:text-amber-700">
                                 Services
                             </a>
                         </li>
 
                         <li>
                             <a href="#work" onclick="closeMenu()"
-                                class="block text-stone-800 dark:text-stone-200 hover:text-amber-700">
+                                class="block text-zinc-800 dark:text-stone-200 hover:text-amber-700">
                                 My Work
                             </a>
                         </li>
 
                         <li>
                             <a href="#contact" onclick="closeMenu()"
-                                class="block text-stone-800 dark:text-stone-200 hover:text-amber-700">
+                                class="block text-zinc-800 dark:text-stone-200 hover:text-amber-700">
                                 Contact
                             </a>
                         </li>
@@ -333,7 +327,7 @@
                 </div>
 
                 <div
-                    class="space-y-3 pt-6 border-t border-beige-200 dark:border-beige-800 text-xs font-mono text-stone-500">
+                    class="space-y-3 pt-6 border-t border-zinc-200 dark:border-beige-800 text-xs font-mono text-zinc-500">
 
                     <p>📍 Abuja, Nigeria</p>
                     <p>🎓 Cosmopolitan University</p>
@@ -358,7 +352,7 @@
 
         <!-- Status -->
         <div
-            class="inline-flex items-center justify-center gap-2 px-3 py-1.5 rounded-full border border-stone-300 dark:border-beige-800 bg-beige-100 dark:bg-beige-900 text-stone-700 dark:text-stone-300 text-[10px] sm:text-xs font-medium mb-6 backdrop-blur-sm max-w-full">
+            class="inline-flex items-center justify-center gap-2 px-3 py-1.5 rounded-full border border-zinc-300 dark:border-beige-800 bg-zinc-100 dark:bg-beige-900 text-zinc-700 dark:text-stone-300 text-[10px] sm:text-xs font-medium mb-6 backdrop-blur-sm max-w-full">
 
             <span class="relative flex h-2 w-2 shrink-0">
 
@@ -375,7 +369,7 @@
         <div class="relative group mb-6">
 
             <div
-                class="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-beige-200 dark:border-beige-800 shadow-xl bg-beige-200 dark:bg-beige-900">
+                class="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-zinc-200 dark:border-beige-800 shadow-xl bg-zinc-100 dark:bg-beige-900">
 
                 <img src="./images/profile-img.png" alt="Abdullahi Hashim Bala"
                     class="w-full h-full object-cover object-top"
@@ -385,11 +379,11 @@
 
         <!-- Headline -->
         <h3
-            class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-lg sm:text-2xl font-serif text-stone-700 dark:text-stone-300 mb-2">
+            class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-lg sm:text-2xl font-serif text-zinc-700 dark:text-stone-300 mb-2">
 
             <span>Hi! I'm</span>
 
-            <span class="font-semibold text-stone-900 dark:text-white">
+            <span class="font-semibold text-zinc-900 dark:text-white">
                 Abdullahi Hashim Bala
             </span>
 
@@ -400,13 +394,13 @@
         </h3>
 
         <h1
-            class="text-3xl sm:text-5xl lg:text-6xl font-serif leading-tight font-normal text-stone-900 dark:text-white max-w-4xl tracking-tight mb-6">
+            class="text-3xl sm:text-5xl lg:text-6xl font-serif leading-tight font-normal text-zinc-900 dark:text-white max-w-4xl tracking-tight mb-6">
 
             Full Stack Web Developer & Software Engineer
         </h1>
 
         <p
-            class="max-w-2xl mx-auto font-serif text-stone-600 dark:text-stone-400 text-base sm:text-lg leading-relaxed mb-8">
+            class="max-w-2xl mx-auto font-serif text-zinc-600 dark:text-stone-400 text-base sm:text-lg leading-relaxed mb-8">
 
             I am a full stack developer from Abuja, Nigeria. I am currently studying Software Engineering at
             Cosmopolitan University, creating high-performance, resilient web solutions.
@@ -416,7 +410,7 @@
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
 
             <a href="#contact"
-                class="w-full sm:w-auto justify-center px-8 py-3.5 rounded-full bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 font-serif font-medium flex items-center gap-2 hover:bg-amber-800 dark:hover:bg-amber-600 dark:hover:text-white transition-all duration-300 shadow-md">
+                class="w-full sm:w-auto justify-center px-8 py-3.5 rounded-full bg-zinc-900 text-white dark:bg-stone-100 dark:text-stone-900 font-serif font-medium flex items-center gap-2 hover:bg-amber-800 dark:hover:bg-amber-600 dark:hover:text-white transition-all duration-300 shadow-md">
 
                 <span>Contact Me</span>
 
@@ -427,7 +421,7 @@
             </a>
 
             <a href="./images/my-cv.pdf" download
-                class="w-full sm:w-auto justify-center px-8 py-3.5 rounded-full border border-beige-300 dark:border-beige-800 flex items-center gap-2 bg-white dark:bg-beige-900 text-stone-800 dark:text-stone-200 font-serif hover:bg-beige-100 dark:hover:bg-beige-800 transition-all duration-300 shadow-sm">
+                class="w-full sm:w-auto justify-center px-8 py-3.5 rounded-full border border-zinc-300 dark:border-beige-800 flex items-center gap-2 bg-white dark:bg-beige-900 text-zinc-800 dark:text-stone-200 font-serif hover:bg-zinc-100 dark:hover:bg-beige-800 transition-all duration-300 shadow-sm">
 
                 <span>My Resume</span>
 
@@ -441,48 +435,48 @@
 
         <!-- Quick Engineering Badges -->
         <div
-            class="mt-12 pt-8 border-t border-beige-200 dark:border-beige-800 w-full max-w-3xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+            class="mt-12 pt-8 border-t border-zinc-200 dark:border-beige-800 w-full max-w-3xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
 
-            <div class="p-3 rounded-xl bg-white dark:bg-beige-900 border border-beige-200 dark:border-beige-800">
+            <div class="p-3 rounded-xl bg-white dark:bg-beige-900 border border-zinc-200 dark:border-beige-800">
 
                 <div class="font-mono font-bold text-lg text-amber-800 dark:text-amber-500">
                     3
                 </div>
 
-                <div class="text-xs text-stone-500 font-medium">
+                <div class="text-xs text-zinc-500 font-medium">
                     Live Projects
                 </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-white dark:bg-beige-900 border border-beige-200 dark:border-beige-800">
+            <div class="p-3 rounded-xl bg-white dark:bg-beige-900 border border-zinc-200 dark:border-beige-800">
 
-                <div class="font-mono font-bold text-lg text-stone-800 dark:text-stone-200 break-words">
+                <div class="font-mono font-bold text-lg text-zinc-800 dark:text-stone-200 break-words">
                     Cosmopolitan
                 </div>
 
-                <div class="text-xs text-stone-500 font-medium">
+                <div class="text-xs text-zinc-500 font-medium">
                     Software Engineering
                 </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-white dark:bg-beige-900 border border-beige-200 dark:border-beige-800">
+            <div class="p-3 rounded-xl bg-white dark:bg-beige-900 border border-zinc-200 dark:border-beige-800">
 
-                <div class="font-mono font-bold text-lg text-stone-800 dark:text-stone-200">
+                <div class="font-mono font-bold text-lg text-zinc-800 dark:text-stone-200">
                     Full Stack
                 </div>
 
-                <div class="text-xs text-stone-500 font-medium">
+                <div class="text-xs text-zinc-500 font-medium">
                     MERN & Python Stack
                 </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-white dark:bg-beige-900 border border-beige-200 dark:border-beige-800">
+            <div class="p-3 rounded-xl bg-white dark:bg-beige-900 border border-zinc-200 dark:border-beige-800">
 
-                <div class="font-mono font-bold text-lg text-stone-800 dark:text-stone-200">
+                <div class="font-mono font-bold text-lg text-zinc-800 dark:text-stone-200">
                     Abuja, NG
                 </div>
 
-                <div class="text-xs text-stone-500 font-medium">
+                <div class="text-xs text-zinc-500 font-medium">
                     Location
                 </div>
             </div>
@@ -491,14 +485,14 @@
 
     <!-- About Me Section -->
     <section id="about"
-        class="w-full px-5 sm:px-8 md:px-12 lg:px-[10%] py-16 scroll-mt-20 border-t border-beige-200 dark:border-beige-800">
+        class="w-full px-5 sm:px-8 md:px-12 lg:px-[10%] py-16 scroll-mt-20 border-t border-zinc-200 dark:border-beige-800">
 
         <h4
             class="text-center mb-1 text-xs font-mono font-semibold uppercase tracking-widest text-amber-800 dark:text-amber-500">
             Introduction
         </h4>
 
-        <h2 class="text-center text-3xl sm:text-5xl font-serif text-stone-900 dark:text-white mb-12">
+        <h2 class="text-center text-3xl sm:text-5xl font-serif text-zinc-900 dark:text-white mb-12">
             About Me
         </h2>
 
@@ -510,7 +504,7 @@
                 <div class="relative group">
 
                     <img src="./images/user-picture.png" alt="Abdullahi Hashim Bala"
-                        class="relative w-full rounded-3xl object-cover border border-beige-200 dark:border-beige-800 shadow-lg bg-white dark:bg-beige-900"
+                        class="relative w-full rounded-3xl object-cover border border-zinc-200 dark:border-beige-800 shadow-lg bg-white dark:bg-beige-900"
                         onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 360\' fill=\'%23080807\'><rect width=\'300\' height=\'360\' fill=\'%23111110\'/><text x=\'50%25\' y=\'45%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23ad8d6d\' font-family=\'sans-serif\' font-size=\'22\' font-weight=\'bold\'>Abdullahi Hashim</text><text x=\'50%25\' y=\'55%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23c5a88a\' font-family=\'sans-serif\' font-size=\'14\'>Software Engineer</text></svg>';">
 
                 </div>
@@ -519,7 +513,7 @@
             <div class="flex-1 w-full min-w-0">
 
                 <p
-                    class="mb-8 font-serif text-stone-600 dark:text-stone-300 text-base sm:text-lg leading-relaxed text-left">
+                    class="mb-8 font-serif text-zinc-600 dark:text-stone-300 text-base sm:text-lg leading-relaxed text-left">
 
                     I'm a Software Engineer and Full-Stack Developer in the making, passionate about transforming ideas
                     into fast, functional, and meaningful digital experiences. I specialise in modern web development
@@ -534,10 +528,10 @@
 
                     <!-- Tech Stack -->
                     <div
-                        class="border border-beige-200 dark:border-beige-800 rounded-2xl p-6 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm min-w-0">
+                        class="border border-zinc-200 dark:border-beige-800 rounded-2xl p-6 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm min-w-0">
 
                         <div
-                            class="w-10 h-10 rounded-xl bg-beige-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-4">
+                            class="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-4">
 
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -545,29 +539,29 @@
                             </svg>
                         </div>
 
-                        <h3 class="my-1 font-semibold text-stone-900 dark:text-white">
+                        <h3 class="my-1 font-semibold text-zinc-900 dark:text-white">
                             Languages
                         </h3>
 
-                        <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        <p class="text-zinc-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed mb-3">
                             HTML, CSS, JavaScript, Python
                         </p>
 
-                        <h3 class="my-1 font-semibold text-stone-900 dark:text-white">
+                        <h3 class="my-1 font-semibold text-zinc-900 dark:text-white">
                             Frameworks
                         </h3>
 
-                        <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
+                        <p class="text-zinc-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
                             React.js, Node.js, Express.js, Tailwind
                         </p>
                     </div>
 
                     <!-- Education -->
                     <div
-                        class="border border-beige-200 dark:border-beige-800 rounded-2xl p-6 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm min-w-0">
+                        class="border border-zinc-200 dark:border-beige-800 rounded-2xl p-6 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm min-w-0">
 
                         <div
-                            class="w-10 h-10 rounded-xl bg-beige-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-4">
+                            class="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-4">
 
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -578,14 +572,14 @@
                             </svg>
                         </div>
 
-                        <h3 class="my-1 font-semibold text-stone-900 dark:text-white">
+                        <h3 class="my-1 font-semibold text-zinc-900 dark:text-white">
                             Education
                         </h3>
 
-                        <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
+                        <p class="text-zinc-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
                             B.Sc. Software Engineering<br>
 
-                            <span class="font-medium text-stone-700 dark:text-stone-300">
+                            <span class="font-medium text-zinc-700 dark:text-stone-300">
                                 Cosmopolitan University, Nigeria
                             </span>
 
@@ -595,10 +589,10 @@
 
                     <!-- Projects -->
                     <div
-                        class="border border-beige-200 dark:border-beige-800 rounded-2xl p-6 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm sm:col-span-2 lg:col-span-1 min-w-0">
+                        class="border border-zinc-200 dark:border-beige-800 rounded-2xl p-6 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm sm:col-span-2 lg:col-span-1 min-w-0">
 
                         <div
-                            class="w-10 h-10 rounded-xl bg-beige-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-4">
+                            class="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-4">
 
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -606,11 +600,11 @@
                             </svg>
                         </div>
 
-                        <h3 class="my-1 font-semibold text-stone-900 dark:text-white">
+                        <h3 class="my-1 font-semibold text-zinc-900 dark:text-white">
                             Projects
                         </h3>
 
-                        <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
+                        <p class="text-zinc-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
                             Built and deployed practical software projects spanning web development, agriculture
                             technology, e-commerce, and academic analytics.
                         </p>
@@ -618,12 +612,11 @@
                 </div>
 
                 <!-- Tools -->
-                <h4
-                    class="my-6 text-stone-800 dark:text-stone-200 font-serif text-lg flex flex-wrap items-center gap-2">
+                <h4 class="my-6 text-zinc-800 dark:text-stone-200 font-serif text-lg flex flex-wrap items-center gap-2">
 
                     <span>Tools I Use Daily</span>
 
-                    <span class="text-xs font-mono text-stone-500">
+                    <span class="text-xs font-mono text-zinc-500">
                         development ecosystem
                     </span>
                 </h4>
@@ -631,31 +624,31 @@
                 <div class="flex items-center gap-3 sm:gap-4 flex-wrap">
 
                     <div
-                        class="flex items-center gap-2 px-3.5 py-2 border border-beige-200 dark:border-beige-800 rounded-xl bg-white dark:bg-beige-900 text-xs font-mono">
+                        class="flex items-center gap-2 px-3.5 py-2 border border-zinc-200 dark:border-beige-800 rounded-xl bg-white dark:bg-beige-900 text-xs font-mono">
 
                         <span class="w-2 h-2 rounded-full bg-blue-500"></span> VS Code
                     </div>
 
                     <div
-                        class="flex items-center gap-2 px-3.5 py-2 border border-beige-200 dark:border-beige-800 rounded-xl bg-white dark:bg-beige-900 text-xs font-mono">
+                        class="flex items-center gap-2 px-3.5 py-2 border border-zinc-200 dark:border-beige-800 rounded-xl bg-white dark:bg-beige-900 text-xs font-mono">
 
                         <span class="w-2 h-2 rounded-full bg-emerald-500"></span> MongoDB
                     </div>
 
                     <div
-                        class="flex items-center gap-2 px-3.5 py-2 border border-beige-200 dark:border-beige-800 rounded-xl bg-white dark:bg-beige-900 text-xs font-mono">
+                        class="flex items-center gap-2 px-3.5 py-2 border border-zinc-200 dark:border-beige-800 rounded-xl bg-white dark:bg-beige-900 text-xs font-mono">
 
                         <span class="w-2 h-2 rounded-full bg-orange-500"></span> Git & GitHub
                     </div>
 
                     <div
-                        class="flex items-center gap-2 px-3.5 py-2 border border-beige-200 dark:border-beige-800 rounded-xl bg-white dark:bg-beige-900 text-xs font-mono">
+                        class="flex items-center gap-2 px-3.5 py-2 border border-zinc-200 dark:border-beige-800 rounded-xl bg-white dark:bg-beige-900 text-xs font-mono">
 
                         <span class="w-2 h-2 rounded-full bg-cyan-500"></span> React.js
                     </div>
 
                     <div
-                        class="flex items-center gap-2 px-3.5 py-2 border border-beige-200 dark:border-beige-800 rounded-xl bg-white dark:bg-beige-900 text-xs font-mono">
+                        class="flex items-center gap-2 px-3.5 py-2 border border-zinc-200 dark:border-beige-800 rounded-xl bg-white dark:bg-beige-900 text-xs font-mono">
 
                         <span class="w-2 h-2 rounded-full bg-green-500"></span> Node.js
                     </div>
@@ -666,18 +659,18 @@
 
     <!-- Services Section -->
     <section id="services"
-        class="w-full px-5 sm:px-8 md:px-12 lg:px-[10%] py-16 scroll-mt-20 border-t border-beige-200 dark:border-beige-800">
+        class="w-full px-5 sm:px-8 md:px-12 lg:px-[10%] py-16 scroll-mt-20 border-t border-zinc-200 dark:border-beige-800">
 
         <h4
             class="text-center mb-1 text-xs font-mono font-semibold uppercase tracking-widest text-amber-800 dark:text-amber-500">
             What I Offer
         </h4>
 
-        <h2 class="text-center text-3xl sm:text-5xl font-serif text-stone-900 dark:text-white">
+        <h2 class="text-center text-3xl sm:text-5xl font-serif text-zinc-900 dark:text-white">
             My Services
         </h2>
 
-        <p class="text-center max-w-2xl mx-auto mt-4 mb-12 font-serif text-stone-600 dark:text-stone-400">
+        <p class="text-center max-w-2xl mx-auto mt-4 mb-12 font-serif text-zinc-600 dark:text-stone-400">
             Specialized engineering solutions tailored to build scalable web platforms, high-converting interfaces, and
             robust server architectures.
         </p>
@@ -686,12 +679,12 @@
 
             <!-- Service 1 -->
             <div
-                class="border border-beige-200 dark:border-beige-800 rounded-2xl p-6 sm:p-8 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm flex flex-col justify-between group min-w-0">
+                class="border border-zinc-200 dark:border-beige-800 rounded-2xl p-6 sm:p-8 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm flex flex-col justify-between group min-w-0">
 
                 <div>
 
                     <div
-                        class="w-12 h-12 rounded-xl bg-beige-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        class="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -699,11 +692,11 @@
                         </svg>
                     </div>
 
-                    <h3 class="text-xl my-3 text-stone-900 dark:text-white font-semibold">
+                    <h3 class="text-xl my-3 text-zinc-900 dark:text-white font-semibold">
                         Frontend Development
                     </h3>
 
-                    <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6">
+                    <p class="text-sm text-zinc-600 dark:text-stone-400 leading-relaxed mb-6">
                         Building responsive, modern, and interactive websites that work seamlessly across desktop and
                         mobile devices.
                     </p>
@@ -723,12 +716,12 @@
 
             <!-- Service 2 -->
             <div
-                class="border border-beige-200 dark:border-beige-800 rounded-2xl p-6 sm:p-8 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm flex flex-col justify-between group min-w-0">
+                class="border border-zinc-200 dark:border-beige-800 rounded-2xl p-6 sm:p-8 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm flex flex-col justify-between group min-w-0">
 
                 <div>
 
                     <div
-                        class="w-12 h-12 rounded-xl bg-beige-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        class="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -736,11 +729,11 @@
                         </svg>
                     </div>
 
-                    <h3 class="text-xl my-3 text-stone-900 dark:text-white font-semibold">
+                    <h3 class="text-xl my-3 text-zinc-900 dark:text-white font-semibold">
                         UI/UX Implementation
                     </h3>
 
-                    <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6">
+                    <p class="text-sm text-zinc-600 dark:text-stone-400 leading-relaxed mb-6">
                         Turning designs and ideas into polished, functional interfaces with meticulous attention to
                         responsive layouts and user experience.
                     </p>
@@ -760,12 +753,12 @@
 
             <!-- Service 3 -->
             <div
-                class="border border-beige-200 dark:border-beige-800 rounded-2xl p-6 sm:p-8 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm flex flex-col justify-between group md:col-span-2 lg:col-span-1 min-w-0">
+                class="border border-zinc-200 dark:border-beige-800 rounded-2xl p-6 sm:p-8 bg-white dark:bg-beige-900 hover:border-amber-700/50 transition-all duration-300 shadow-sm flex flex-col justify-between group md:col-span-2 lg:col-span-1 min-w-0">
 
                 <div>
 
                     <div
-                        class="w-12 h-12 rounded-xl bg-beige-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        class="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-beige-800 text-amber-800 dark:text-amber-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -773,11 +766,11 @@
                         </svg>
                     </div>
 
-                    <h3 class="text-xl my-3 text-stone-900 dark:text-white font-semibold">
+                    <h3 class="text-xl my-3 text-zinc-900 dark:text-white font-semibold">
                         Full Stack Development
                     </h3>
 
-                    <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6">
+                    <p class="text-sm text-zinc-600 dark:text-stone-400 leading-relaxed mb-6">
                         Developing complete web applications from user interface to backend services, RESTful APIs,
                         databases, and secure authentication.
                     </p>
@@ -799,18 +792,18 @@
 
     <!-- Projects Section -->
     <section id="work"
-        class="w-full px-5 sm:px-8 md:px-12 lg:px-[10%] py-16 scroll-mt-20 border-t border-beige-200 dark:border-beige-800">
+        class="w-full px-5 sm:px-8 md:px-12 lg:px-[10%] py-16 scroll-mt-20 border-t border-zinc-200 dark:border-beige-800">
 
         <h4
             class="text-center mb-1 text-xs font-mono font-semibold uppercase tracking-widest text-amber-800 dark:text-amber-500">
             My Portfolio
         </h4>
 
-        <h2 class="text-center text-3xl sm:text-5xl font-serif text-stone-900 dark:text-white">
+        <h2 class="text-center text-3xl sm:text-5xl font-serif text-zinc-900 dark:text-white">
             My Latest Work
         </h2>
 
-        <p class="text-center max-w-2xl mx-auto mt-4 mb-8 font-serif text-stone-600 dark:text-stone-400">
+        <p class="text-center max-w-2xl mx-auto mt-4 mb-8 font-serif text-zinc-600 dark:text-stone-400">
             Explore full-stack applications, interactive tools, and web systems built with modern technologies and
             practical problem-solving in mind.
         </p>
@@ -819,22 +812,22 @@
         <div class="flex items-center justify-center gap-2 flex-wrap mb-10">
 
             <button onclick="filterProjects('all')" id="filter-all"
-                class="filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 transition-all cursor-pointer">
+                class="filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-zinc-900 text-white dark:bg-stone-100 dark:text-stone-900 transition-all cursor-pointer">
                 All Projects
             </button>
 
             <button onclick="filterProjects('fullstack')" id="filter-fullstack"
-                class="filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-beige-100 dark:bg-beige-900 text-stone-600 dark:text-stone-400 hover:bg-beige-200 dark:hover:bg-beige-800 transition-all cursor-pointer">
+                class="filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-zinc-100 dark:bg-beige-900 text-zinc-600 dark:text-stone-400 hover:bg-zinc-200 dark:hover:bg-beige-800 transition-all cursor-pointer">
                 Full Stack
             </button>
 
             <button onclick="filterProjects('webapps')" id="filter-webapps"
-                class="filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-beige-100 dark:bg-beige-900 text-stone-600 dark:text-stone-400 hover:bg-beige-200 dark:hover:bg-beige-800 transition-all cursor-pointer">
+                class="filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-zinc-100 dark:bg-beige-900 text-zinc-600 dark:text-stone-400 hover:bg-zinc-200 dark:hover:bg-beige-800 transition-all cursor-pointer">
                 Web Apps
             </button>
 
             <button onclick="filterProjects('tools')" id="filter-tools"
-                class="filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-beige-100 dark:bg-beige-900 text-stone-600 dark:text-stone-400 hover:bg-beige-200 dark:hover:bg-beige-800 transition-all cursor-pointer">
+                class="filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-zinc-100 dark:bg-beige-900 text-zinc-600 dark:text-stone-400 hover:bg-zinc-200 dark:hover:bg-beige-800 transition-all cursor-pointer">
                 Tools
             </button>
         </div>
@@ -847,7 +840,7 @@
         <div class="text-center mt-12">
 
             <button id="showMoreBtn" onclick="toggleShowMoreProjects()"
-                class="inline-flex items-center justify-center gap-2 text-stone-800 dark:text-stone-200 border border-beige-300 dark:border-beige-800 rounded-full py-3 px-8 bg-white dark:bg-beige-900 hover:bg-stone-900 hover:text-white dark:hover:bg-stone-100 dark:hover:text-stone-900 transition-all duration-300 font-serif text-sm cursor-pointer shadow-sm">
+                class="inline-flex items-center justify-center gap-2 text-zinc-800 dark:text-stone-200 border border-zinc-300 dark:border-beige-800 rounded-full py-3 px-8 bg-white dark:bg-beige-900 hover:bg-zinc-900 hover:text-white dark:hover:bg-stone-100 dark:hover:text-stone-900 transition-all duration-300 font-serif text-sm cursor-pointer shadow-sm">
 
                 <span id="showMoreText">
                     Show More Projects
@@ -863,24 +856,24 @@
 
     <!-- Contact Section -->
     <section id="contact"
-        class="w-full px-5 sm:px-8 md:px-12 lg:px-[10%] py-16 scroll-mt-20 border-t border-beige-200 dark:border-beige-800">
+        class="w-full px-5 sm:px-8 md:px-12 lg:px-[10%] py-16 scroll-mt-20 border-t border-zinc-200 dark:border-beige-800">
 
         <h4
             class="text-center mb-1 text-xs font-mono font-semibold uppercase tracking-widest text-amber-800 dark:text-amber-500">
             Connect with me
         </h4>
 
-        <h2 class="text-center text-3xl sm:text-5xl font-serif text-stone-900 dark:text-white">
+        <h2 class="text-center text-3xl sm:text-5xl font-serif text-zinc-900 dark:text-white">
             Get in Touch
         </h2>
 
-        <p class="text-center max-w-2xl mx-auto mt-4 mb-10 font-serif text-stone-600 dark:text-stone-400">
+        <p class="text-center max-w-2xl mx-auto mt-4 mb-10 font-serif text-zinc-600 dark:text-stone-400">
             I'd love to hear from you! Whether you have a project idea, software inquiry, or role opportunity, drop a
             message below.
         </p>
 
         <form id="contactForm" onsubmit="handleFormSubmit(event)"
-            class="max-w-2xl mx-auto bg-white dark:bg-beige-900 p-5 sm:p-10 rounded-3xl border border-beige-200 dark:border-beige-800 shadow-sm">
+            class="max-w-2xl mx-auto bg-white dark:bg-beige-900 p-5 sm:p-10 rounded-3xl border border-zinc-200 dark:border-beige-800 shadow-sm">
 
             <input type="hidden" name="access_key" value="f5472e58-6b0b-48c0-b444-fe918b9f2215">
 
@@ -889,36 +882,36 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-4">
 
                 <div>
-                    <label class="block text-xs font-mono text-stone-500 mb-2">
+                    <label class="block text-xs font-mono text-zinc-500 mb-2">
                         YOUR NAME
                     </label>
 
                     <input type="text" name="name" placeholder="John Doe" required
-                        class="w-full p-3.5 outline-none border border-beige-200 dark:border-beige-800 rounded-xl bg-beige-50 dark:bg-beige-950 text-stone-900 dark:text-white text-sm focus:border-amber-700 transition-all">
+                        class="w-full p-3.5 outline-none border border-zinc-200 dark:border-beige-800 rounded-xl bg-zinc-50 dark:bg-beige-950 text-zinc-900 dark:text-white text-sm focus:border-amber-700 transition-all">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-mono text-stone-500 mb-2">
+                    <label class="block text-xs font-mono text-zinc-500 mb-2">
                         YOUR EMAIL
                     </label>
 
                     <input type="email" name="email" placeholder="john@example.com" required
-                        class="w-full p-3.5 outline-none border border-beige-200 dark:border-beige-800 rounded-xl bg-beige-50 dark:bg-beige-950 text-stone-900 dark:text-white text-sm focus:border-amber-700 transition-all">
+                        class="w-full p-3.5 outline-none border border-zinc-200 dark:border-beige-800 rounded-xl bg-zinc-50 dark:bg-beige-950 text-zinc-900 dark:text-white text-sm focus:border-amber-700 transition-all">
                 </div>
             </div>
 
             <div class="mb-6">
 
-                <label class="block text-xs font-mono text-stone-500 mb-2">
+                <label class="block text-xs font-mono text-zinc-500 mb-2">
                     YOUR MESSAGE
                 </label>
 
                 <textarea name="message" rows="5" placeholder="Tell me about your project or inquiry..." required
-                    class="w-full p-3.5 outline-none border border-beige-200 dark:border-beige-800 rounded-xl bg-beige-50 dark:bg-beige-950 text-stone-900 dark:text-white text-sm focus:border-amber-700 transition-all resize-y"></textarea>
+                    class="w-full p-3.5 outline-none border border-zinc-200 dark:border-beige-800 rounded-xl bg-zinc-50 dark:bg-beige-950 text-zinc-900 dark:text-white text-sm focus:border-amber-700 transition-all resize-y"></textarea>
             </div>
 
             <button id="submitBtn" type="submit"
-                class="w-full py-4 px-8 flex items-center justify-center gap-2 bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 font-medium rounded-xl hover:bg-amber-800 dark:hover:bg-amber-600 dark:hover:text-white transition-all duration-300 cursor-pointer shadow-md text-sm">
+                class="w-full py-4 px-8 flex items-center justify-center gap-2 bg-zinc-900 text-white dark:bg-stone-100 dark:text-stone-900 font-medium rounded-xl hover:bg-amber-800 dark:hover:bg-amber-600 dark:hover:text-white transition-all duration-300 cursor-pointer shadow-md text-sm">
 
                 <span id="submitBtnText">
                     Send Message
@@ -938,7 +931,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="mt-20 border-t border-beige-200 dark:border-beige-800 bg-white dark:bg-beige-900">
+    <footer class="mt-20 border-t border-zinc-200 dark:border-beige-800 bg-white dark:bg-beige-900">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-10">
 
             <!-- Logo + short description -->
@@ -946,18 +939,18 @@
                 <img src="./images/logo.png" alt="Logo" class="w-24 sm:w-28 md:w-32 dark:hidden">
                 <img src="./images/logo-dark.png" alt="Logo" class="w-24 sm:w-28 md:w-32 hidden dark:block">
 
-                <p class="mt-3 text-xs sm:text-sm text-stone-500">
+                <p class="mt-3 text-xs sm:text-sm text-zinc-500">
                     Software Engineering @ Cosmopolitan University, Abuja
                 </p>
             </div>
 
             <!-- Copyright + Links -->
-            <div class="mt-8 pt-6 border-t border-beige-200 dark:border-beige-800
+            <div class="mt-8 pt-6 border-t border-zinc-200 dark:border-beige-800
                     flex flex-col sm:flex-row items-center justify-between
                     gap-4">
 
                 <!-- Copyright - Left -->
-                <p class="text-xs sm:text-sm text-stone-500">
+                <p class="text-xs sm:text-sm text-zinc-500">
                     © 2026 Abdullahi Hashim Bala. All rights reserved.
                 </p>
 
@@ -987,10 +980,10 @@
         class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 overflow-y-auto modal-blur bg-black/80">
 
         <div
-            class="relative w-full max-w-3xl bg-white dark:bg-beige-900 border border-beige-200 dark:border-beige-800 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden my-4 sm:my-8 max-h-[94vh] sm:max-h-[90vh] flex flex-col">
+            class="relative w-full max-w-3xl bg-white dark:bg-beige-900 border border-zinc-200 dark:border-beige-800 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden my-4 sm:my-8 max-h-[94vh] sm:max-h-[90vh] flex flex-col">
 
             <div
-                class="p-4 sm:p-6 border-b border-beige-200 dark:border-beige-800 flex items-start justify-between gap-4 bg-beige-50 dark:bg-beige-950/90">
+                class="p-4 sm:p-6 border-b border-zinc-200 dark:border-beige-800 flex items-start justify-between gap-4 bg-zinc-50 dark:bg-beige-950/90">
 
                 <div class="min-w-0">
 
@@ -1000,13 +993,13 @@
                     </span>
 
                     <h2 id="modalTitle"
-                        class="text-xl sm:text-2xl font-serif font-semibold text-stone-900 dark:text-white break-words">
+                        class="text-xl sm:text-2xl font-serif font-semibold text-zinc-900 dark:text-white break-words">
                         Project Title
                     </h2>
                 </div>
 
                 <button onclick="closeProjectModal()"
-                    class="p-2 rounded-xl bg-beige-200 dark:bg-beige-800 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white transition-colors shrink-0">
+                    class="p-2 rounded-xl bg-zinc-200 dark:bg-beige-800 text-zinc-600 dark:text-stone-400 hover:text-zinc-900 dark:hover:text-white transition-colors shrink-0">
 
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1018,7 +1011,7 @@
             <div class="p-4 sm:p-8 overflow-y-auto space-y-6 flex-1 text-sm">
 
                 <div
-                    class="relative rounded-2xl overflow-hidden border border-beige-200 dark:border-beige-800 aspect-video bg-beige-950">
+                    class="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-beige-800 aspect-video bg-beige-950">
 
                     <img id="modalImage" src="" alt="" class="w-full h-full object-cover"
                         onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 600 350\' fill=\'%23080807\'><rect width=\'600\' height=\'350\' fill=\'%23111110\'/><text x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23ad8d6d\' font-family=\'sans-serif\' font-size=\'24\'>Project Preview</text></svg>';">
@@ -1026,18 +1019,18 @@
 
                 <div>
 
-                    <h3 class="font-serif text-lg font-semibold text-stone-900 dark:text-white mb-2">
+                    <h3 class="font-serif text-lg font-semibold text-zinc-900 dark:text-white mb-2">
                         Project Overview
                     </h3>
 
                     <p id="modalDescription"
-                        class="text-stone-600 dark:text-stone-300 leading-relaxed font-serif text-base">
+                        class="text-zinc-600 dark:text-stone-300 leading-relaxed font-serif text-base">
                     </p>
                 </div>
 
                 <div>
 
-                    <h4 class="font-mono text-xs text-stone-500 mb-2 uppercase">
+                    <h4 class="font-mono text-xs text-zinc-500 mb-2 uppercase">
                         Tech Stack & Tools
                     </h4>
 
@@ -1047,16 +1040,16 @@
             </div>
 
             <div
-                class="p-4 sm:p-6 border-t border-beige-200 dark:border-beige-800 bg-beige-50 dark:bg-beige-950/90 flex flex-col sm:flex-row items-center justify-end gap-3">
+                class="p-4 sm:p-6 border-t border-zinc-200 dark:border-beige-800 bg-zinc-50 dark:bg-beige-950/90 flex flex-col sm:flex-row items-center justify-end gap-3">
 
                 <button onclick="closeProjectModal()"
-                    class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-beige-300 dark:border-beige-800 text-stone-700 dark:text-stone-300 font-medium text-xs hover:bg-beige-100 dark:hover:bg-beige-800">
+                    class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-zinc-300 dark:border-beige-800 text-zinc-700 dark:text-stone-300 font-medium text-xs hover:bg-zinc-100 dark:hover:bg-beige-800">
 
                     Close
                 </button>
 
                 <a id="modalGithubBtn" href="#" target="_blank" rel="noopener noreferrer"
-                    class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-stone-900 text-white dark:bg-beige-800 dark:text-white font-medium text-xs flex items-center justify-center gap-2 hover:bg-amber-800">
+                    class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-zinc-900 text-white dark:bg-beige-800 dark:text-white font-medium text-xs flex items-center justify-center gap-2 hover:bg-amber-800">
 
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path
@@ -1083,17 +1076,17 @@
         class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 modal-blur bg-black/80">
 
         <div
-            class="relative w-full max-w-xl bg-white dark:bg-beige-900 border border-beige-200 dark:border-beige-800 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden p-5 sm:p-8 max-h-[90vh] overflow-y-auto">
+            class="relative w-full max-w-xl bg-white dark:bg-beige-900 border border-zinc-200 dark:border-beige-800 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden p-5 sm:p-8 max-h-[90vh] overflow-y-auto">
 
             <div
-                class="flex items-center justify-between pb-4 border-b border-beige-200 dark:border-beige-800 mb-4 gap-4">
+                class="flex items-center justify-between pb-4 border-b border-zinc-200 dark:border-beige-800 mb-4 gap-4">
 
-                <h3 id="serviceModalTitle" class="text-xl font-semibold text-stone-900 dark:text-white">
+                <h3 id="serviceModalTitle" class="text-xl font-semibold text-zinc-900 dark:text-white">
                     Service Details
                 </h3>
 
                 <button onclick="closeServiceModal()"
-                    class="p-2 rounded-xl hover:bg-beige-100 dark:hover:bg-beige-800 text-stone-500 shrink-0">
+                    class="p-2 rounded-xl hover:bg-zinc-100 dark:hover:bg-beige-800 text-zinc-500 shrink-0">
 
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1103,13 +1096,13 @@
             </div>
 
             <div id="serviceModalBody"
-                class="space-y-4 text-sm text-stone-600 dark:text-stone-300 font-serif leading-relaxed">
+                class="space-y-4 text-sm text-zinc-600 dark:text-stone-300 font-serif leading-relaxed">
             </div>
 
-            <div class="mt-6 pt-4 border-t border-beige-200 dark:border-beige-800 flex justify-end">
+            <div class="mt-6 pt-4 border-t border-zinc-200 dark:border-beige-800 flex justify-end">
 
                 <button onclick="closeServiceModal()"
-                    class="w-full sm:w-auto px-5 py-2 rounded-xl bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 font-medium text-xs hover:bg-amber-800 dark:hover:bg-amber-600 dark:hover:text-white">
+                    class="w-full sm:w-auto px-5 py-2 rounded-xl bg-zinc-900 text-white dark:bg-stone-100 dark:text-stone-900 font-medium text-xs hover:bg-amber-800 dark:hover:bg-amber-600 dark:hover:text-white">
                     Close
                 </button>
             </div>
@@ -1121,22 +1114,22 @@
         class="fixed inset-0 z-50 hidden items-start justify-center pt-16 sm:pt-20 px-3 sm:px-4 modal-blur bg-black/80">
 
         <div
-            class="relative w-full max-w-xl bg-white dark:bg-beige-900 border border-beige-200 dark:border-beige-800 rounded-2xl shadow-2xl overflow-hidden">
+            class="relative w-full max-w-xl bg-white dark:bg-beige-900 border border-zinc-200 dark:border-beige-800 rounded-2xl shadow-2xl overflow-hidden">
 
-            <div class="p-3 sm:p-4 border-b border-beige-200 dark:border-beige-800 flex items-center gap-3">
+            <div class="p-3 sm:p-4 border-b border-zinc-200 dark:border-beige-800 flex items-center gap-3">
 
-                <svg class="w-5 h-5 text-stone-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 text-zinc-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
 
                 <input id="commandInput" type="text" placeholder="Type a command or search..."
-                    class="w-full min-w-0 bg-transparent outline-none text-stone-900 dark:text-white text-sm font-mono placeholder-stone-400"
+                    class="w-full min-w-0 bg-transparent outline-none text-zinc-900 dark:text-white text-sm font-mono placeholder-zinc-400"
                     onkeyup="filterCommands()">
 
                 <button onclick="toggleCommandPalette()"
-                    class="px-2 py-1 rounded text-xs font-mono bg-beige-100 dark:bg-beige-800 text-stone-500 shrink-0">
+                    class="px-2 py-1 rounded text-xs font-mono bg-zinc-100 dark:bg-beige-800 text-zinc-500 shrink-0">
                     ESC
                 </button>
             </div>
@@ -1144,73 +1137,73 @@
             <div id="commandList" class="max-h-80 overflow-y-auto p-2 space-y-1 font-mono text-xs">
 
                 <button onclick="executeCmd('about')"
-                    class="cmd-item w-full text-left p-3 rounded-xl flex items-center justify-between hover:bg-beige-100 dark:hover:bg-beige-800 text-stone-700 dark:text-stone-300">
+                    class="cmd-item w-full text-left p-3 rounded-xl flex items-center justify-between hover:bg-zinc-100 dark:hover:bg-beige-800 text-zinc-700 dark:text-stone-300">
 
                     <span class="flex items-center gap-2">
                         <span>👤</span>
                         Go to About Me
                     </span>
 
-                    <span class="text-stone-400 text-[10px]">
+                    <span class="text-zinc-400 text-[10px]">
                         Jump
                     </span>
                 </button>
 
                 <button onclick="executeCmd('work')"
-                    class="cmd-item w-full text-left p-3 rounded-xl flex items-center justify-between hover:bg-beige-100 dark:hover:bg-beige-800 text-stone-700 dark:text-stone-300">
+                    class="cmd-item w-full text-left p-3 rounded-xl flex items-center justify-between hover:bg-zinc-100 dark:hover:bg-beige-800 text-zinc-700 dark:text-stone-300">
 
                     <span class="flex items-center gap-2">
                         <span>🚀</span>
                         View Software Projects
                     </span>
 
-                    <span class="text-stone-400 text-[10px]">
+                    <span class="text-zinc-400 text-[10px]">
                         Jump
                     </span>
                 </button>
 
                 <button onclick="executeCmd('copy-email')"
-                    class="cmd-item w-full text-left p-3 rounded-xl flex items-center justify-between hover:bg-beige-100 dark:hover:bg-beige-800 text-stone-700 dark:text-stone-300">
+                    class="cmd-item w-full text-left p-3 rounded-xl flex items-center justify-between hover:bg-zinc-100 dark:hover:bg-beige-800 text-zinc-700 dark:text-stone-300">
 
                     <span class="flex items-center gap-2">
                         <span>📧</span>
                         Copy Email
                     </span>
 
-                    <span class="text-stone-400 text-[10px]">
+                    <span class="text-zinc-400 text-[10px]">
                         Clipboard
                     </span>
                 </button>
 
                 <button onclick="executeCmd('download-cv')"
-                    class="cmd-item w-full text-left p-3 rounded-xl flex items-center justify-between hover:bg-beige-100 dark:hover:bg-beige-800 text-stone-700 dark:text-stone-300">
+                    class="cmd-item w-full text-left p-3 rounded-xl flex items-center justify-between hover:bg-zinc-100 dark:hover:bg-beige-800 text-zinc-700 dark:text-stone-300">
 
                     <span class="flex items-center gap-2">
                         <span>📄</span>
                         Download Resume
                     </span>
 
-                    <span class="text-stone-400 text-[10px]">
+                    <span class="text-zinc-400 text-[10px]">
                         PDF
                     </span>
                 </button>
 
                 <button onclick="executeCmd('theme')"
-                    class="cmd-item w-full text-left p-3 rounded-xl flex items-center justify-between hover:bg-beige-100 dark:hover:bg-beige-800 text-stone-700 dark:text-stone-300">
+                    class="cmd-item w-full text-left p-3 rounded-xl flex items-center justify-between hover:bg-zinc-100 dark:hover:bg-beige-800 text-zinc-700 dark:text-stone-300">
 
                     <span class="flex items-center gap-2">
                         <span>🌓</span>
                         Toggle Dark / Light Theme
                     </span>
 
-                    <span class="text-stone-400 text-[10px]">
+                    <span class="text-zinc-400 text-[10px]">
                         Mode
                     </span>
                 </button>
             </div>
 
             <div
-                class="p-3 bg-beige-50 dark:bg-beige-950/90 border-t border-beige-200 dark:border-beige-800 text-[11px] font-mono text-stone-500 flex justify-between">
+                class="p-3 bg-zinc-50 dark:bg-beige-950/90 border-t border-zinc-200 dark:border-beige-800 text-[11px] font-mono text-zinc-500 flex justify-between">
 
                 <span>Navigate with shortcuts</span>
                 <span class="hidden sm:inline">Portfolio</span>
@@ -1223,7 +1216,7 @@
         class="fixed bottom-4 right-4 left-4 sm:left-auto sm:bottom-6 sm:right-6 z-50 hidden translate-y-10 opacity-0 transition-all duration-300 max-w-md mx-auto sm:mx-0">
 
         <div
-            class="flex items-center gap-3 p-4 rounded-2xl bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-2xl border border-stone-700 dark:border-beige-200">
+            class="flex items-center gap-3 p-4 rounded-2xl bg-zinc-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-2xl border border-zinc-700 dark:border-beige-200">
 
             <div id="toastIcon" class="p-2 rounded-xl bg-amber-800 text-white shrink-0">
 
@@ -1238,7 +1231,7 @@
                     Notification
                 </div>
 
-                <div id="toastMessage" class="text-stone-300 dark:text-stone-600 break-words">
+                <div id="toastMessage" class="text-zinc-300 dark:text-stone-600 break-words">
                     Action completed.
                 </div>
             </div>
@@ -1247,8 +1240,8 @@
 
     <script>
         /* =========================================================
-                                                                                                                                                                                                                                                   PROJECT DATA
-                                                                                                                                                                                                                                                   ========================================================= */
+                   PROJECT DATA
+                   ========================================================= */
 
         const PROJECTS_DATA = [
 
@@ -1556,12 +1549,6 @@
                     project.category === currentFilter
                 );
 
-            /*
-                All Projects:
-                collapsed = first 3
-                expanded = all 4
-            */
-
             const limit =
                 isExpanded ?
                     filtered.length :
@@ -1577,7 +1564,7 @@
                     document.createElement('div');
 
                 card.className =
-                    "overflow-hidden rounded-2xl relative cursor-pointer border border-beige-200 dark:border-beige-800 bg-white dark:bg-beige-900 group shadow-sm hover:border-amber-700/50 transition-all duration-300 min-w-0";
+                    "overflow-hidden rounded-2xl relative cursor-pointer border border-zinc-200 dark:border-beige-800 bg-white dark:bg-beige-900 group shadow-sm hover:border-amber-700/50 transition-all duration-300 min-w-0";
 
                 card.onclick = () =>
                     openProjectModal(project.id);
@@ -1607,11 +1594,11 @@
                             src="${project.image}"
                             alt="${project.title}"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
-                            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' viewBox=\\'0 0 400 400\\' fill=\\'%23080807\\'><rect width=\\'400\\' height=\\'400\\' fill=\\'%23111110\\'/><text x=\\'50%25\\' y=\\'45%25\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' fill=\\'%23ad8d6d\\' font-family=\\'sans-serif\\' font-size=\\'22\\' font-weight=\\'bold\\'>${project.title}</text><text x=\\'50%25\\' y=\\'55%25\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' fill=\'%23c5a88a\\' font-family=\\'sans-serif\\' font-size=\\'14\\'>${project.subtitle}</text></svg>';">
+                            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' viewBox=\\'0 0 400 400\\' fill=\\'%23080807\\'><rect width=\\'400\\' height=\\'400\\' fill=\\'%23111110\\'/><text x=\\'50%25\\' y=\\'45%25\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' fill=\\'%23ad8d6d\\' font-family=\\'sans-serif\\' font-size=\\'22\\' font-weight=\\'bold\\'>${project.title}</text><text x=\\'50%25\\' y=\\'55%25\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' fill=\\'%23c5a88a\\' font-family=\\'sans-serif\\' font-size=\\'14\\'>${project.subtitle}</text></svg>';">
                     </div>
 
                     <div
-                        class="bg-white/95 dark:bg-beige-900/95 backdrop-blur-md w-11/12 rounded-xl absolute bottom-3 left-1/2 -translate-x-1/2 py-3 px-3 sm:px-4 flex items-center justify-between gap-2 border border-beige-200 dark:border-beige-800 shadow-md">
+                        class="bg-white/95 dark:bg-beige-900/95 backdrop-blur-md w-11/12 rounded-xl absolute bottom-3 left-1/2 -translate-x-1/2 py-3 px-3 sm:px-4 flex items-center justify-between gap-2 border border-zinc-200 dark:border-beige-800 shadow-md">
 
                         <div class="min-w-0">
 
@@ -1627,18 +1614,18 @@
                             </div>
 
                             <h2
-                                class="font-semibold text-stone-900 dark:text-white text-base leading-tight">
+                                class="font-semibold text-zinc-900 dark:text-white text-base leading-tight">
                                 ${project.title}
                             </h2>
 
                             <p
-                                class="text-xs text-stone-500 line-clamp-1">
+                                class="text-xs text-zinc-500 line-clamp-1">
                                 ${project.subtitle}
                             </p>
                         </div>
 
                         <div
-                            class="border rounded-full border-beige-300 dark:border-beige-800 w-8 h-8 flex items-center justify-center shrink-0 bg-beige-50 dark:bg-beige-800 text-stone-800 dark:text-stone-200 group-hover:bg-amber-800 group-hover:text-white transition-colors">
+                            class="border rounded-full border-zinc-300 dark:border-beige-800 w-8 h-8 flex items-center justify-center shrink-0 bg-zinc-50 dark:bg-beige-800 text-zinc-800 dark:text-stone-200 group-hover:bg-amber-800 group-hover:text-white transition-colors">
 
                             <svg
                                 class="w-3.5 h-3.5"
@@ -1705,7 +1692,7 @@
                 .forEach(btn => {
 
                     btn.className =
-                        "filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-beige-100 dark:bg-beige-900 text-stone-600 dark:text-stone-400 hover:bg-beige-200 dark:hover:bg-beige-800 transition-all cursor-pointer";
+                        "filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-zinc-100 dark:bg-beige-900 text-zinc-600 dark:text-stone-400 hover:bg-zinc-200 dark:hover:bg-beige-800 transition-all cursor-pointer";
                 });
 
 
@@ -1717,7 +1704,7 @@
             if (activeBtn) {
 
                 activeBtn.className =
-                    "filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 transition-all cursor-pointer shadow-sm";
+                    "filter-btn px-4 py-2 rounded-full text-xs font-mono font-medium bg-zinc-900 text-white dark:bg-stone-100 dark:text-stone-900 transition-all cursor-pointer shadow-sm";
             }
 
             renderProjects();
@@ -1805,7 +1792,7 @@
                     document.createElement('span');
 
                 badge.className =
-                    "px-3 py-1 rounded-lg bg-beige-100 dark:bg-beige-800 text-stone-800 dark:text-stone-200 text-xs font-mono border border-beige-200 dark:border-beige-800";
+                    "px-3 py-1 rounded-lg bg-zinc-100 dark:bg-beige-800 text-zinc-800 dark:text-stone-200 text-xs font-mono border border-zinc-200 dark:border-beige-800";
 
                 badge.textContent = tech;
 
@@ -1858,7 +1845,7 @@
                         I create fast, responsive, and accessible web interfaces using modern tools like React.js, Tailwind CSS, and Vanilla JavaScript.
                     </p>
 
-                    <h4 class="font-semibold text-stone-900 dark:text-white font-sans text-sm">
+                    <h4 class="font-semibold text-zinc-900 dark:text-white font-sans text-sm">
                         Key Deliverables:
                     </h4>
 
@@ -1880,7 +1867,7 @@
                         Bridging design concepts with full-stack code implementation, ensuring intuitive navigation and polished visual interfaces.
                     </p>
 
-                    <h4 class="font-semibold text-stone-900 dark:text-white font-sans text-sm">
+                    <h4 class="font-semibold text-zinc-900 dark:text-white font-sans text-sm">
                         Design Principles:
                     </h4>
 
@@ -1902,7 +1889,7 @@
                         Developing complete web applications from frontend interfaces to backend services, APIs, databases, and authentication systems.
                     </p>
 
-                    <h4 class="font-semibold text-stone-900 dark:text-white font-sans text-sm">
+                    <h4 class="font-semibold text-zinc-900 dark:text-white font-sans text-sm">
                         Engineering Capabilities:
                     </h4>
 
